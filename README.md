@@ -1,10 +1,10 @@
 # My python code (Babel)
 
-This repository contains my python programs
+This repository contains my python programs.
 
 ## SETUP
 
-This folder contains a simple python program that outputs a *Hello World*.
+This folder contains a simple python program that outputs a *Hello World* string.
 
 ## INPUT
 
