@@ -15,4 +15,7 @@ This folder contains a list of python files:
 3. third.py
 
 These programs takes in a user input and perform some verifications to ensure that this input has this format:
-`First name <Middle name> Last name`
+
+```
+First name <Middle name> Last name
+```
