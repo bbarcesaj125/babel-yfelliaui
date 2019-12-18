@@ -23,7 +23,7 @@ def display_year(input_display):
 
 def calculate_year(input_year):
     """ This function is where the actual calculations are made.
-    Before doing any calculations it calls validate_year() to verify the entered values. """
+    Before doing any calculations it calls validate_year_form() to verify the entered values. """
 
     now = datetime.datetime.now()
     year_now = now.year
@@ -33,7 +33,7 @@ def calculate_year(input_year):
     dic = {}
     dic["error"] = ""
 
-    form = validate_year(input_year)
+    form = validate_year_form(input_year)
     # print(form)
 
     if form != "Malformed input!":
@@ -72,7 +72,7 @@ def calculate_year(input_year):
     return dic
 
 
-def validate_year(user_input):
+def validate_year_form(user_input):
     """ This functions takes in the user input and verify it according to a set of criteria. """
 
     year = str(user_input)
@@ -103,9 +103,8 @@ def validate_year(user_input):
             int(year)
         except:
             form = "Malformed input!"
-
     return form
 
 
 if __name__ == "__main__":
-    display_year(74)
+    display_year(1351)
