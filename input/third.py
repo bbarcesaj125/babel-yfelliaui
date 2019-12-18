@@ -6,7 +6,7 @@ if validate_string("yusuf"):
     print("Ok")
 
 print("THIRD")
-d = validate("Emmanuel10 G. Sandorfi")
+d = validate("Yusuf47 Felly")
 if F_ERROR in d:
     print(d[F_ERROR])
 print(d)
