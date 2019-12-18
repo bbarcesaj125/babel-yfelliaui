@@ -75,6 +75,5 @@ def validate(input_list):
     return dict
 
 
-manage_input()
-if __name__ == "__main":
+if __name__ == "__main__":
     manage_input()
