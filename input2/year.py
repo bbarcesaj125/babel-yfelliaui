@@ -39,20 +39,24 @@ def calculate_year(input_year):
     if form != "Malformed input!":
 
         if len(form) == 4:
-            dic["nb_years"] = now.year - int(input_year)
+            if int(input_year) < now.year:
 
-            if form == "19XX":
-                dic["nb_years"] = now.year - input_year
-                dic["century"] = "20th"
-            elif form == "20XX":
-                dic["nb_years"] = now.year - input_year
-                dic["century"] = "21st"
-
-            elif form == "XXXX":
                 dic["nb_years"] = now.year - int(input_year)
-                dic["century"] = int(str(input_year)[:2]) - 1
+
+                if form == "19XX":
+                    # dic["nb_years"] = now.year - input_year
+                    dic["century"] = "20th"
+                elif form == "20XX":
+                    # dic["nb_years"] = now.year - input_year
+                    dic["century"] = "21st"
+
+                elif form == "XXXX":
+                    # dic["nb_years"] = now.year - int(input_year)
+                    dic["century"] = int(str(input_year)[:2]) - 1
+                else:
+                    dic["error"] = "Error"
             else:
-                dic["error"] = "Error"
+                dic["error"] = "Futur date!!"
 
         elif form == "XX":
             if int(year_now_trimmed) <= int(input_year):
@@ -107,4 +111,4 @@ def validate_year_form(user_input):
 
 
 if __name__ == "__main__":
-    display_year(1351)
+    display_year(2951)
