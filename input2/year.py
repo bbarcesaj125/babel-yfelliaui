@@ -39,6 +39,7 @@ def calculate_year(input_year):
     if form != "Malformed input!":
 
         if len(form) == 4:
+            # Check that the entered date is not in the futur
             if int(input_year) < now.year:
 
                 dic["nb_years"] = now.year - int(input_year)
