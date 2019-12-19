@@ -112,4 +112,4 @@ def validate_year_form(user_input):
 
 
 if __name__ == "__main__":
-    display_year(2951)
+    display_year(1551)
