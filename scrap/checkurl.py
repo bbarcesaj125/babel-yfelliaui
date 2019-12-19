@@ -3,6 +3,9 @@ from requests.exceptions import HTTPError
 import json
 from bs4 import BeautifulSoup
 
+""" This is a program that takes in a list of urls and then tries to extract information (e.g. Page's title) from them
+using BeautifulSoup. """
+
 
 F_URL = "url"
 F_STATUS = "status_code"
@@ -41,6 +44,7 @@ def get(url):
 
 
 def write_to_dic(res, is_verbose):
+
     title = search_title_bs4(res.text)
     print(f"BS4 test {title}")
     # title = search_title(res.text)
@@ -58,13 +62,14 @@ def write_to_dic(res, is_verbose):
 
 
 def search_title_bs4(res):
+    """ This function extracts the title of an HTML page using BeautifulSoup. """
     soup = BeautifulSoup(res, "lxml")
     print(f"Test bs4: {soup.title.string}")
     return soup.title.string
 
 
 def search_title(text):
-    """ This functions extracts the title of an HTML page. """
+    """ This function extracts the title of an HTML page. """
 
     retbuffer = begin = 0
     end = None
@@ -87,7 +92,7 @@ def write_to_file(list_data):
 def display_url(res, is_verbose=False):
 
     if res:
-        print(f"--> There are {len(res.text)} bytes in {res.url}")
+        print(f"--> There are {len(res.text)} Bytes in {res.url}")
         if is_verbose:
             print("Status :", res.status_code)
             # print("Headers :", res.headers)
@@ -112,9 +117,3 @@ if __name__ == "__main__":
     ]
 
     get_urls(url_list)
-
-
-# response = requests.get("https://www.liberation.fr/")
-# res = requests.get("https://api.github.com")
-# print(response.headers["Date"])
-# print(res.json())
