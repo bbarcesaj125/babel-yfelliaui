@@ -22,7 +22,7 @@ These programs takes in a user input and perform some verifications to ensure th
 First name <Middle name> Last name
 ```
 
-## INPUT
+## INPUT2
 
 This folder contains the following files:
 
