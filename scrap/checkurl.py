@@ -31,7 +31,8 @@ def get_urls(arglist, is_verbose=False):
 
             display_url(res, is_verbose=False)
             dic_list_new = write_to_dic(res, is_verbose=False)
-            write_to_file(dic_list_new)
+
+    format_dic(dic_list_new)
 
 
 def get(url):
@@ -96,6 +97,16 @@ def search_title(text):
             retbuffer = text[begin:end]
     print(f"Test search_title : {begin}, {end}, {retbuffer}")
     return retbuffer
+
+
+def format_dic(list):
+
+    dic = {
+        "count": len(list),
+        "dataset": list,
+    }
+
+    write_to_file(dic)
 
 
 def write_to_file(list_data):

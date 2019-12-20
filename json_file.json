@@ -1,0 +1,45 @@
+{
+    "count": 4,
+    "dataset": [
+        {
+            "url": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
+            "status_code": 200,
+            "metadata": {
+                "title": "No meta title given!",
+                "description": "No meta description given!",
+                "image": "No meta image given!"
+            },
+            "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 "
+        },
+        {
+            "url": "https://www.whatismybrowser.com/detect/what-is-my-user-agent",
+            "status_code": 200,
+            "metadata": {
+                "title": "What is my User Agent?",
+                "description": "Every request your web browser makes includes your User Agent; find out what your browser is sending and what this identifies your system as.",
+                "image": "https://cdn.whatismybrowser.com/prod-website/static/main/images/logo/open-graph-logo.png"
+            },
+            "content": "<!DOCTYPE html>\n<html lang=\"en\" class=\"no-js\""
+        },
+        {
+            "url": "https://www.reddit.com/",
+            "status_code": 200,
+            "metadata": {
+                "title": "reddit",
+                "description": "No meta description given!",
+                "image": "https://www.redditstatic.com/icon.png"
+            },
+            "content": "<!DOCTYPE html><html lang=\"en-US\"><head><scri"
+        },
+        {
+            "url": "https://stackoverflow.com/",
+            "status_code": 200,
+            "metadata": {
+                "title": "Stack Overflow - Where Developers Learn, Share, & Build Careers",
+                "description": "Stack Overflow | The World\u2019s Largest Online Community for Developers",
+                "image": "https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded"
+            },
+            "content": "<!DOCTYPE html>\r\n\r\n\r\n    <html class=\"html__r"
+        }
+    ]
+}
