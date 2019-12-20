@@ -145,6 +145,7 @@ if __name__ == "__main__":
         "https://www.whatismybrowser.com/detect/what-is-my-user-agent",
         "https://www.reddit.com/",
         "https://stackoverflow.com/",
+        "https://www.amazon.fr/",
     ]
 
     get_urls(url_list)

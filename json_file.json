@@ -1,5 +1,5 @@
 {
-    "count": 4,
+    "count": 5,
     "dataset": [
         {
             "url": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
@@ -35,6 +35,14 @@
                 "image": "https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded"
             },
             "content": "<!DOCTYPE html>\r\n\r\n\r\n    <html class=\"html__r"
+        },
+        {
+            "url": "https://www.amazon.fr/",
+            "status_code": 200,
+            "metadata": {
+                "description": "Achat et vente en ligne parmi des millions de produits en stock. Livraison gratuite \u00e0 partir de 25\u20ac. Vos articles \u00e0 petits prix : culture, high-tech, mode, jouets, sport, maison et bien plus !"
+            },
+            "content": "<!doctype html><html lang=\"fr-fr\" class=\"a-no"
         }
     ]
 }

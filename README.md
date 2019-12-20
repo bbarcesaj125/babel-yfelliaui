@@ -54,10 +54,11 @@ This is a python program that uses BeautifulSoup to scrap web pages and returns 
 It contains the following functions:
 
     - get_urls()
-    - get(url)
+    - get()
     - write_to_dic()
     - search_meta_bs4()
     - search_title()
     - write_to_file()
     - display_url()
+    - format_dic()
 
