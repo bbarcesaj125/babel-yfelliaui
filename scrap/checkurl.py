@@ -9,10 +9,10 @@ using BeautifulSoup. """
 
 F_URL = "url"
 F_STATUS = "status_code"
-F_TITLE = "title"
+F_META = "metadata"
 F_CONTENT = "content"
-global dic_list
 dic_list = []
+dic_nested_bs = []
 
 
 def get_urls(arglist, is_verbose=False):
@@ -44,33 +44,46 @@ def get(url):
 
 
 def write_to_dic(res, is_verbose):
+    """ This function calls search_meta_bs4() to extract the metadata and then places them in a dictionary. """
 
-    title = search_title_bs4(res.text)
-    print(f"BS4 test {title}")
-    # title = search_title(res.text)
+    meta_data = search_meta_bs4(res.text)
+
     dic = {
         F_URL: res.url,
         F_STATUS: res.status_code,
-        F_TITLE: title,
-        F_CONTENT: res.text[:1000],
+        F_META: meta_data,
+        F_CONTENT: res.text[:45],
     }
-    # print(f"lol: {res.url}")
-    # global dic_list
+
     dic_list.append(dic)
     return dic_list
-    # print(f"Fuck off already!!! {dic_list}")
 
 
-def search_title_bs4(res):
-    """ This function extracts the title of an HTML page using BeautifulSoup. """
+def search_meta_bs4(res):
+    """ This function extracts the metadata of an HTML page using BeautifulSoup. """
 
     soup = BeautifulSoup(res, "lxml")
-    print(f"Test bs4: {soup.title.string}")
-    return soup.title.string
+    title = soup.find("meta", property="og:title")
+    description = soup.find("meta", property="og:description")
+    image = soup.find("meta", property="og:image")
+
+    title_final = title["content"] if title else "No meta title given!"
+    description_final = (
+        description["content"] if description else "No meta description given!"
+    )
+    image_final = image["content"] if image else "No meta image given!"
+
+    dic = {
+        "title": title_final,
+        "description": description_final,
+        "image": image_final,
+    }
+
+    return dic
 
 
 def search_title(text):
-    """ This function extracts the title of an HTML page. """
+    """ ***OBSOLETE*** This is a function extracts the title of an HTML page. """
 
     retbuffer = begin = 0
     end = None
@@ -115,6 +128,8 @@ if __name__ == "__main__":
         "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
         "https://api.github.com/invalid",
         "https://www.whatismybrowser.com/detect/what-is-my-user-agent",
+        "https://www.reddit.com/",
+        "https://stackoverflow.com/",
     ]
 
     get_urls(url_list)
