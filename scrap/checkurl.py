@@ -63,6 +63,7 @@ def write_to_dic(res, is_verbose):
 
 def search_title_bs4(res):
     """ This function extracts the title of an HTML page using BeautifulSoup. """
+
     soup = BeautifulSoup(res, "lxml")
     print(f"Test bs4: {soup.title.string}")
     return soup.title.string

@@ -9,3 +9,6 @@ This file includes all the activities I've done during this python course:
 - Learned how to use operators, types etc
 - Created a program that takes in a date input to calculate the user's age 
 - Implemented unit tests in the previous program
+- Used BeautifulSoup library to scrap web pages
+- Learned `pipenv` to create a python virtual environment
+- Installed python linters (e.g. Flake8)
