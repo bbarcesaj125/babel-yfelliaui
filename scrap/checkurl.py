@@ -68,11 +68,9 @@ def search_meta_bs4(res):
     description = soup.find("meta", property="og:description")
     image = soup.find("meta", property="og:image")
 
-    title_final = title["content"] if title else "No meta title given!"
-    description_final = (
-        description["content"] if description else "No meta description given!"
-    )
-    image_final = image["content"] if image else "No meta image given!"
+    title_final = title["content"] if title else None
+    description_final = description["content"] if description else None
+    image_final = image["content"] if image else None
 
     dic = {
         "title": title_final,
@@ -80,7 +78,13 @@ def search_meta_bs4(res):
         "image": image_final,
     }
 
-    return dic
+    new_dic = {}
+
+    for key, value in dic.items():
+        if value:
+            new_dic[key] = value
+
+    return new_dic
 
 
 def search_title(text):
