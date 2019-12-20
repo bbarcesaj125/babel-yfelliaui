@@ -56,7 +56,7 @@ It contains the following functions:
     - get_urls()
     - get(url)
     - write_to_dic()
-    - search_title_bs4()
+    - search_meta_bs4()
     - search_title()
     - write_to_file()
     - display_url()
