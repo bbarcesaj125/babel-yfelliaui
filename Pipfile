@@ -12,6 +12,7 @@ black = "*"
 requests = "*"
 beautifulsoup4 = "*"
 lxml = "*"
+django = "*"
 
 [requires]
 python_version = "3.8"
