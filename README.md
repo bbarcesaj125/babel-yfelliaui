@@ -42,3 +42,22 @@ It contains the following functions:
 
 This file mainly contains the unit tests that are performed on `year.py`.
 
+## SCRAP
+
+This folder has the following file:
+
+1. checkurl.py
+
+### `checkurl.py`
+
+This is a python program that uses BeautifulSoup to scrap web pages and returns a dictionary with the scraped data.
+It contains the following functions:
+
+    - get_urls()
+    - get(url)
+    - write_to_dic()
+    - search_title_bs4()
+    - search_title()
+    - write_to_file()
+    - display_url()
+
