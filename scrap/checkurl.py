@@ -83,7 +83,7 @@ def search_meta_bs4(res):
 
 
 def search_title(text):
-    """ ***OBSOLETE*** This is a function extracts the title of an HTML page. """
+    """ ***OBSOLETE*** This is a function that extracts the title of an HTML page. """
 
     retbuffer = begin = 0
     end = None
