@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.html import format_html
 
 # Create your models here.
 
@@ -31,6 +32,8 @@ class Author(models.Model):
 class Dewey(models.Model):
     name = models.CharField(max_length=61)
     number = models.IntegerField()
+    bg_color = models.CharField(max_length=7, default="*")
+    text_color = models.CharField(max_length=7, default="*")
 
     def __str__(self):
         return f"{self.number} {self.name}"
@@ -38,7 +41,7 @@ class Dewey(models.Model):
 
 class Publication(models.Model):
     TYPEPUBLICATION_CHOICES = [
-        ("_", "Indéfini"),
+        ("*", "Autre"),
         ("B", "Livre"),
         ("M", "Musique"),
         ("F", "Film"),
@@ -47,9 +50,10 @@ class Publication(models.Model):
     name = models.CharField(max_length=61)
     reference = models.CharField(max_length=61, editable=False)
     type_publication = models.CharField(
-        max_length=1, choices=TYPEPUBLICATION_CHOICES, default="_",
+        max_length=1, choices=TYPEPUBLICATION_CHOICES, default="B",
     )
     genre = models.CharField(max_length=35)
+    isbn = models.CharField(max_length=50, blank=True, null=True)
 
     author = models.ForeignKey(Author, models.PROTECT, null=True)
     dewey_number = models.ForeignKey(Dewey, models.PROTECT, null=True)
@@ -59,6 +63,7 @@ class Publication(models.Model):
     nb_tracks_page = models.IntegerField(blank=True, null=True)
     content = models.TextField(blank=True, null=True)
     image_url = models.URLField(blank=True, null=True)
+    image_file = models.ImageField(blank=True, null=True)
 
     class Meta:
         ordering = ["reference"]
