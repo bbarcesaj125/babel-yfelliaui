@@ -29,3 +29,5 @@ In the process of coding this project, I have applied/learned the following conc
 - Converted the UML models into python models `models.py`
 - Used `python makemigrations` & `python migrate` to migrate these models
 - Learned how to use Django admin to manage the SQLite database (CRUD operations)
+- Used `__str__` inside models to return a human-readable representation of some fields.
+- Used `Model.clean()` method to perform custom model validations

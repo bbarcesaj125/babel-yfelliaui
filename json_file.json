@@ -1,48 +1,51 @@
 {
-    "count": 5,
-    "dataset": [
-        {
-            "url": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
-            "status_code": 200,
-            "metadata": {},
-            "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 "
-        },
-        {
-            "url": "https://www.whatismybrowser.com/detect/what-is-my-user-agent",
-            "status_code": 200,
-            "metadata": {
-                "title": "What is my User Agent?",
-                "description": "Every request your web browser makes includes your User Agent; find out what your browser is sending and what this identifies your system as.",
-                "image": "https://cdn.whatismybrowser.com/prod-website/static/main/images/logo/open-graph-logo.png"
-            },
-            "content": "<!DOCTYPE html>\n<html lang=\"en\" class=\"no-js\""
-        },
-        {
-            "url": "https://www.reddit.com/",
-            "status_code": 200,
-            "metadata": {
-                "title": "reddit",
-                "image": "https://www.redditstatic.com/icon.png"
-            },
-            "content": "<!DOCTYPE html><html lang=\"en-US\"><head><scri"
-        },
-        {
-            "url": "https://stackoverflow.com/",
-            "status_code": 200,
-            "metadata": {
-                "title": "Stack Overflow - Where Developers Learn, Share, & Build Careers",
-                "description": "Stack Overflow | The World\u2019s Largest Online Community for Developers",
-                "image": "https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded"
-            },
-            "content": "<!DOCTYPE html>\r\n\r\n\r\n    <html class=\"html__r"
-        },
-        {
-            "url": "https://www.amazon.fr/",
-            "status_code": 200,
-            "metadata": {
-                "description": "Achat et vente en ligne parmi des millions de produits en stock. Livraison gratuite \u00e0 partir de 25\u20ac. Vos articles \u00e0 petits prix : culture, high-tech, mode, jouets, sport, maison et bien plus !"
-            },
-            "content": "<!doctype html><html lang=\"fr-fr\" class=\"a-no"
-        }
-    ]
+  "count": 5,
+  "dataset": [
+    {
+      "url": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
+      "status_code": 200,
+      "metadata": { "h1": "Beautiful Soup Documentation\u00b6" },
+      "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 "
+    },
+    {
+      "url": "https://www.whatismybrowser.com/detect/what-is-my-user-agent",
+      "status_code": 200,
+      "metadata": {
+        "title": "What is my User Agent?",
+        "description": "Every request your web browser makes includes your User Agent; find out what your browser is sending and what this identifies your system as.",
+        "image": "https://cdn.whatismybrowser.com/prod-website/static/main/images/logo/open-graph-logo.png",
+        "h1": "What is my User Agent?"
+      },
+      "content": "<!DOCTYPE html>\n<html lang=\"en\" class=\"no-js\""
+    },
+    {
+      "url": "https://www.reddit.com/",
+      "status_code": 200,
+      "metadata": {
+        "title": "reddit",
+        "image": "https://www.redditstatic.com/icon.png",
+        "h1": "Popular"
+      },
+      "content": "<!DOCTYPE html><html lang=\"en-US\"><head><scri"
+    },
+    {
+      "url": "https://stackoverflow.com/",
+      "status_code": 200,
+      "metadata": {
+        "title": "Stack Overflow - Where Developers Learn, Share, & Build Careers",
+        "description": "Stack Overflow | The World\u2019s Largest Online Community for Developers",
+        "image": "https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded",
+        "h1": "We <3 people who code"
+      },
+      "content": "<!DOCTYPE html>\r\n\r\n\r\n    <html class=\"html__r"
+    },
+    {
+      "url": "https://www.amazon.fr/",
+      "status_code": 200,
+      "metadata": {
+        "description": "Achat et vente en ligne parmi des millions de produits en stock. Livraison gratuite \u00e0 partir de 25\u20ac. Vos articles \u00e0 petits prix : culture, high-tech, mode, jouets, sport, maison et bien plus !"
+      },
+      "content": "<!doctype html><html lang=\"fr-fr\" class=\"a-no"
+    }
+  ]
 }

@@ -67,15 +67,18 @@ def search_meta_bs4(res):
     title = soup.find("meta", property="og:title")
     description = soup.find("meta", property="og:description")
     image = soup.find("meta", property="og:image")
+    h1 = soup.find("h1")
 
     title_final = title["content"] if title else None
     description_final = description["content"] if description else None
     image_final = image["content"] if image else None
+    h1_final = h1.text if h1 else None
 
     dic = {
         "title": title_final,
         "description": description_final,
         "image": image_final,
+        "h1": h1_final,
     }
 
     new_dic = {}
